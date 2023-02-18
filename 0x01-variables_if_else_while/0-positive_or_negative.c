@@ -3,9 +3,10 @@
 #include <stdio.h>
 
 /**
- * main - a program that prints negative or postive
- * retun: 0
+ * main- This program will assign a random number to a variable
+ * return: 0
  */
+
 int main(void)
 {
 	int n;
@@ -13,10 +14,11 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
-		printf("%d is positive\n", n);
-	else if (n < 0)
-		printf("%d is negative\n", n);
+		prinf("is positive");
+	else if (n < 0);
+		printf("is negative");
 	else
-		printf("%d is zero\n", n);
+		printf("is zero");
+
 	return (0);
 }
