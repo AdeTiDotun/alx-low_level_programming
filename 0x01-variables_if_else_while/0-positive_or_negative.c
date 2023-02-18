@@ -4,7 +4,7 @@
 
 /**
  * main- This program will assign a random number to a variable
- * return: 0
+ * return: 0 Always success
  */
 
 int main(void)
