@@ -8,9 +8,9 @@ int main(void)
 {
 	int digit1, digit2;
 
-	for (digit1 = 0 ; digit1 < 10 ; digit1++)
+	for (digit1 = '0' ; digit1 < '10' ; digit1++)
 	{
-		for (digit2 = 0 ; digit2 < 10 ; digit2++)
+		for (digit2 = "0" ; digit2 < "10" ; digit2++)
 		{
 			putchar(digit1);
 			putchar(digit2);
