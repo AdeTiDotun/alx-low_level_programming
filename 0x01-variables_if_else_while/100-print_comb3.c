@@ -9,17 +9,18 @@
 
 int main(void)
 {
-	int digit1, digit2;
+	int n;
+	int j;
 
-	for (digit1 = 0 ; digit1 <= 9 ; digit1++)
+	for (n = 0; n <= 9; n++)
 	{
-		for (digit2 = digit1 ; digit2 <= 9 ; digit2++)
+		for (j = n; j <= 9; j++)
 		{
-			if (digit1 = digit2)
+			if (n != j)
 			{
-				putchar('0' + digit1);
-				putchar('0' + digit2);
-				if (digit1 != 8 || digit2 != 9)
+				putchar('0' + n);
+				putchar('0' + j);
+				if (n != 8 || j != 9)
 				{
 					putchar(',');
 					putchar(' ');
@@ -27,9 +28,6 @@ int main(void)
 			}
 		}
 	}
-
-
-	putchar('\n');
-
+	putchar('\n')
 	return (0);
 }
