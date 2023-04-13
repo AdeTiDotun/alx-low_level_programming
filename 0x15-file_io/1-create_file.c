@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
+#include <errno.h>
 
 /**
  * create_file - Function that creates a file.
@@ -24,7 +25,7 @@ int create_file(const char *filename, char *text_content)
 	{
 		if (errno == EEXIST)
 		{
-			fp = open(filenmae, O_WRONLY | O_TRUNC);
+			fp = open(filename, O_WRONLY | O_TRUNC);
 			if (fp == -1)
 				return (-1);
 		}
@@ -36,6 +37,6 @@ int create_file(const char *filename, char *text_content)
 		if (write(fp, &text_content[f], 1) == -1)
 			return (-1);
 	}
-	close (fp);
+	close(fp);
 	return (1);
 }
