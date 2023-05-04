@@ -9,7 +9,7 @@
  * Return: converted decimal number or 0 if there is an unconvertable char
  */
 
-unsigned int binary_to_unit(char* b)
+unsigned int binary_to_uint(const char *b)
 {
 	int len, power;
 	unsigned int val = 0;
@@ -24,10 +24,10 @@ unsigned int binary_to_unit(char* b)
 			return (0);
 	}
 
-	for (power = 1, total = 0, len--; len >= 0; len--, power *= 2)
+	for (power = 1, val = 0, len--; len >= 0; len--, power *= 2)
 	{
 		if (b[len] == '1')
-			total += power;
+			val += power;
 	}
 
 	return (val);
